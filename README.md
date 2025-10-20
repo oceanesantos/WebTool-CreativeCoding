@@ -1,41 +1,58 @@
-3D Interactive Carousel — README
+# Carrousel 3D intéractif - Creative Coding
 
-Idée : un outil web en p5.js pour créer un carrousel 3D interactif dans lequel l'utilisateur·rice importe ses images/vidéos, choisit un fond (couleur ou image), manipule la rotation/zoom, puis exporte le rendu en vidéo (WEBM) téléchargeable — et convertible en MP4 si besoin.
+## L'idée 
+- Transformer ses images ou vidéos en un **carrousel 3D interactif** et personnalisable,
+- Importer ses médias, modifier l’apparence (fond, vitesse, zoom, rotation),
+- Exporter le rendu en vidéo téléchargeable.
 
-Pitch (courte description)
+Référence : [Lien de l'inspiration](https://fr.pinterest.com/pin/649644315050761798/)
 
-Un micro-outil créatif qui transforme des images et vidéos personnelles en une animation carousel 3D soignée et personnalisable. L'utilisateur peut glisser/déposer ses médias, piloter la rotation (manuellement ou en autoplay), changer le fond, et enregistrer le rendu en vidéo pour le partager.
+## Le pitch  
+Un outil créatif et intuitif qui génère une **animation 3D rotatif** à partir de contenus visuels personnels, vidéo et photos.  
+→ L’utilisateur peut glisser-déposer ses fichiers, contrôler la rotation manuellement ou en mode automatique, ajuster le fond et capturer le rendu final sous forme de vidéo prête à partager ou intégrer !
 
-Fonctionnalités principales
+## Les fonctionnalités principales  
+* **Importation multiple** : images ou courtes vidéos via sélection ou glisser-déposer.  
+* **Affichage 3D (WebGL)** : disposition circulaire des médias sur des plans en rotation (effet carrousel).  
+* **Contrôles interactifs** :  
+  * 🖱️ **Drag** → rotation manuelle  
+  * 🧭 **Molette** → zoom avant/arrière  
+  * 🎚️ **Curseurs** → vitesse, zoom, activation/désactivation de l’autoplay  
+* **Personnalisation visuelle** :  
+  * 🎨 Choix d’un fond coloré via *color picker*  
+  
+* **Export vidéo** : sauvegarde automatique en `.webm`
 
-Import multiple d'images et de courtes vidéos (drag & drop ou sélection de fichiers).
+## Son UI / UX  
 
-Visualisation 3D : chaque média est affiché sur une face plane organisée en cercle (carrousel) et tournant en 3D (WebGL p5.js).
+* **Interface épurée** : un panneau latéral réunit les contrôles essentiels, tandis que la zone principale affiche le carrousel en temps réel.  
+* **Retour visuel immédiat** : chaque modification (vitesse, fond, ajout d’image) s’applique instantanément.  
+* **Prise en main fluide** : valeurs par défaut, mais contrôle précis pour les utilisateurs avancés.  
+* **Accessibilité renforcée** :  
+  * ⌨️ Navigation au clavier (flèches pour tourner, +/- pour zoomer)  
+  * 🌈 Contrastes forts et boutons de grande taille pour un confort d’utilisation optimal  
 
-Interactions : drag pour faire tourner, molette pour zoom, curseur de vitesse, autoplay on/off.
+## La structure du projet
 
-Choix de fond : couleur unie (color picker) ou upload d'une image de fond.
+- 📁 **3D-Interactive-Carousel/**  
+  - `index.html` → structure principale du site et intégration des scripts  
+  - `style.css` → mise en forme et ergonomie de l’interface  
+  - `sketch.js` → logique p5.js : chargement des médias, rendu 3D, interactions et export vidéo
 
-Export vidéo : enregistrement du rendu canvas en WEBM via MediaRecorder (bouton Start/Stop + temps d'enregistrement facultatif).
+## Les évolutions possibles  
 
-Téléchargement immédiat du fichier vidéo; conversion en MP4 recommandée via ffmpeg si besoin.
+* Ajout de **formes alternatives** (étoile, spirale, grille dynamique)  
+* Intégration de **filtres visuels ou effets de transition**  
+* Export direct en **.mp4**  
+* Personnalisation avancée du fond (image, dégradé, vidéo, environnement 360°) 
 
-UI / UX (raisonnement)
+Références d'idée d'amélioration : [Lien de l'inspiration](https://fr.pinterest.com/pin/278589926953392048/)
 
-Simplicité d'usage : 1 panneau latéral contenant les contrôles essentiels (upload, fond, vitesse, export). L'aire centrale contient le canvas 3D avec instructions contextuelles.
+## Les technologies  
+* **p5.js (WebGL)** — rendu 3D interactif  
+* **JavaScript (ES6)** — logique et interactions  
+* **HTML / CSS** — structure et interface utilisateur  
+* **MediaRecorder API** — capture vidéo du canvas
 
-Feedback direct : tout changement (vitesse, fond, ajout) est appliqué en temps réel pour encourager l'exploration.
-
-Modes novices & avancés : valeurs par défaut conviviales (autoplay activé, vitesse moyenne) mais contrôle fin disponible pour les utilisateurs avancés.
-
-Accessibilité : utilisation au clavier possible (flèches pour rotation, +/- pour zoom), textes clairs et boutons assez grands.
-
-Architecture du projet
-
-Fichiers fournis :
-
-index.html — structure HTML + liens scripts
-
-style.css — styles simples pour l'UI
-
-sketch.js — logique p5.js (chargement de médias, rendu 3D, interactions)
+Projet réalisé dans le cadre du cours **Creative Coding** 
+— ICAN Paris **Océane DOS SANTOS**
