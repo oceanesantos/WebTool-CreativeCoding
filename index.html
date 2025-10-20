@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Carrousel — p5.js</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="controls">
+      <h1>3D Carrousel</h1>
+
+      <label class="btn">Importer médias
+        <input id="fileInput" type="file" accept="image/*,video/*" multiple hidden>
+      </label>
+
+      <div class="control-row">
+        <label>Fond couleur</label>
+        <input id="bgColor" type="color" value="#000000">
+      </div>
+
+      <div class="control-row">
+        <label>Autoplay <input id="autoplay" type="checkbox" checked></label>
+      </div>
+
+      <div class="control-row">
+        <label>Vitesse</label>
+        <input id="speed" type="range" min="0" max="5" step="0.1" value="0.6">
+      </div>
+
+      <div class="control-row">
+        <label>Zoom</label>
+        <input id="zoom" type="range" min="0.6" max="2" step="0.05" value="1">
+      </div>
+
+      <div class="control-row">
+        <button id="startRec">🎥 Démarrer</button>
+        <button id="stopRec" disabled>⏹️ Arrêter</button>
+      </div>
+
+      <p class="hint">💡 Glisse des images/vidéos ici ou utilise le bouton importer.  
+      Clique & glisse pour tourner, molette pour zoomer.</p>
+    </aside>
+
+    <main id="canvasWrap"></main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
